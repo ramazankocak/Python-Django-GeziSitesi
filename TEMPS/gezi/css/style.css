@@ -1,0 +1,657 @@
+/*
+ * Author 	: HIMANSHU GUPTA 
+ * Email 		: himanshucse2012@gmail.com
+ * Website	:	http://www.indioweb.in/portfolio
+ */
+ 
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600);
+ 
+/*
+ * Basic CSS starts 
+ */
+
+body{
+	font-family: 'Open Sans', Sans Serif;
+	font-weight: 400;
+	color: #545454;
+	-webkit-font-smoothing: antialiased;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Open Sans', Sans Serif;
+	font-weight: 600;
+}
+
+p{
+	margin:0;
+	padding:0;
+	color: #787878;
+}
+
+a{
+	text-decoration: none;
+	color: #14D5D6;
+}
+
+a:hover{
+	text-decoration: none;
+	color: #000000;
+}
+
+a:hover,a:active,a:focus {
+	outline: 0;
+}
+
+hr{
+
+}
+
+:focus {
+	outline:none;
+}
+
+::-moz-focus-inner {
+	border:0;
+}
+
+/* 
+ * Basic CSS ends 
+ */
+ /**********************************/
+/********** Top Bar CSS ***********/
+/**********************************/
+.top-bar {
+    position: relative;
+    height: 90px;
+    background: #43A0AE;
+}
+
+.top-bar .logo {
+    padding: 15px 0;
+    text-align: left;
+    overflow: hidden;
+}
+
+.top-bar .logo h1 {
+    margin: 0;
+    color: #000000;
+    font-size: 58px;
+    line-height: 55px;
+    font-weight: 800;
+}
+
+.top-bar .logo img {
+    max-width: 100%;
+    max-height: 60px;
+}
+
+.top-bar .top-bar-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.top-bar .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 90px;
+    padding: 0 20px;
+    text-align: center;
+    border-left: 1px solid rgba(255, 255, 255, .15);
+}
+
+.top-bar .text h2 {
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 25px;
+    margin: 0;
+}
+
+.top-bar .text p {
+    color: #ffffff;
+    font-size: 13px;
+    margin: 0;
+}
+
+.top-bar .social {
+    display: flex;
+    height: 90px;
+    font-size: 0;
+    justify-content: flex-end;
+}
+
+.top-bar .social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 100%;
+    font-size: 22px;
+    color: #ffffff;
+    border-right: 1px solid rgba(255, 255, 255, .15);
+}
+
+.top-bar .social a:first-child {
+    border-left: 1px solid rgba(255, 255, 255, .15);
+}
+
+.top-bar .social a:hover {
+    color: #3E3E3E;
+    background: #ffffff;
+}
+
+@media (min-width: 992px) {
+    .top-bar {
+        padding: 0 60px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .top-bar .logo {
+        text-align: center;
+    }
+    
+    .top-bar .social {
+        display: none;
+    }
+}
+
+/*******************************/
+/******** Slider CSS *********/
+/*******************************/
+#slider {
+	background:#fff url(loading.gif) no-repeat 50% 50%;
+	position:relative;
+	margin:0 auto;/*make the image slider center-aligned */
+    box-shadow: 0px 1px 5px #999999;
+}
+#slider img {
+	position:absolute;
+	border:none;
+	display:none;
+}
+
+/* the link style (if an image is wrapped in a link) */
+#slider a.imgLink {
+	z-index:2;
+	display:none;position:absolute;
+	top:0px;left:0px;border:0;padding:0;margin:0;
+	width:100%;height:100%;
+}
+
+/* Caption styles */
+div.mc-caption-bg, div.mc-caption-bg2 {
+	position:absolute;
+	width:100%;
+	height:auto;
+	padding:0;
+	left:0px; 
+	bottom:15px;
+	z-index:3;
+	overflow:hidden;
+	font-size: 0;
+}
+div.mc-caption-bg {
+	background-color:black;
+}
+div.mc-caption {
+	font: bold 14px/20px Arial;
+	color:#EEE;
+	z-index:4;
+	padding:10px 0;
+	text-align:center;
+}
+div.mc-caption a {
+	color:#FB0;
+}
+div.mc-caption a:hover {
+	color:#DA0;
+}
+
+
+/* ------ built-in navigation bullets wrapper ------*/
+div.navBulletsWrapper  {
+	top:320px; left:280px; /* Its position is relative to the #slider */
+	width:150px;
+	background:none;
+	padding-left:20px;
+	position:relative;
+	z-index:5;
+	cursor:pointer;
+}
+
+/* each bullet */
+div.navBulletsWrapper div 
+{
+    width:11px; height:11px;
+    background:transparent url(../resim/bullet.png) no-repeat 0 0;
+    float:left;overflow:hidden;vertical-align:middle;cursor:pointer;
+    margin-right:11px;/* distance between each bullet*/
+    _position:relative;/*IE6 hack*/
+}
+
+div.navBulletsWrapper div.active {background-position:0 -11px;}
+
+
+/* --------- Others ------- */
+#slider 
+{
+	transform: translate3d(10,10,10);
+    -ms-transform:translate3d(10,10,0);
+    -moz-transform:translate3d(10,10,0);
+    -o-transform:translate3d(10,10,0);
+}
+header .navbar { 
+	margin: 0;
+	background: #00CEC5;
+	border-radius: 0;
+	border-bottom: 2px solid rgba(0,0,0,0.2); 
+	box-shadow: 0 1px 15px rgba(0,0,0,0.2);
+}
+header .navbar-default .navbar-nav>li>a {
+	margin: 15px 3px;
+	padding-top: 6px;
+	color: #fff;
+	padding-bottom: 6px;
+	border-radius: 2px;
+}
+
+header .navbar-default .navbar-nav>li>a:hover, 
+header .navbar-default .navbar-nav>li>a:focus,
+header .navbar-default .navbar-nav>li.open>a:hover, 
+header .navbar-default .navbar-nav>li.open>a:focus {
+	background: #fff;
+}
+
+header .navbar-nav .dropdown-menu {
+	top: 57px;
+	border-radius: 3px;
+}
+header .navbar-nav .dropdown-menu:after, 
+header .navbar-nav .dropdown-menu:before {
+	bottom: 100%;
+	right: 20px;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+header .navbar-nav .dropdown-menu:after {
+	border-color: rgba(240, 253, 255, 0);
+	border-bottom-color: #fff;
+	border-width: 7px;
+}
+
+header .navbar-nav .dropdown-menu:before {
+	border-color: rgba(194, 225, 245, 0);
+	border-bottom-color: #00CEC5;
+	border-width: 8px;
+	margin-right: -1px;
+}
+header .navbar-brand {
+	padding: 0;
+	height: auto;
+}
+header .navbar-brand img {
+	position: relative;
+	top: 5px;
+	max-width: 165px;
+}
+
+/*
+ * Banner 
+ */
+ 
+.banner {
+	background: #009A93;
+	padding-top: 120px;
+	padding-bottom: 120px;
+	text-align: center;
+}
+
+.banner h2 {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 28px;
+	line-height: 35px;
+	color: #eee;
+	text-transform: capitalize;
+}
+.banner p {
+	max-width: 700px;
+	margin: 0 auto;
+	margin-top: 10px;
+	font-size: 13px;
+	line-height: 24px;
+	color: #ddd;
+	text-transform: uppercase;
+	letter-spacing: 0.055em;
+}
+
+/* 
+ * after banner content
+ */
+ 
+.after-banner {
+	padding-top: 60px;
+}
+
+.after-banner .ab-item {
+	max-width: 360px;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+
+.after-banner .ab-item h3 {
+	margin-top: 0;
+	font-size: 24px;
+}
+
+.after-banner .ab-item  p {
+	font-size: 14px;
+	line-height: 24px;
+	letter-spacing: 0.025em;
+}
+
+/*
+ * default heading
+ */
+
+.default-heading  {
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+.default-heading h2{
+	margin-top: 0;
+	font-size: 30px;
+	color: #676767;
+	font-weight: 400;
+}
+
+/*
+ * events
+ */
+
+.event {
+	padding-top: 60px;
+}
+
+.event .event-item {
+	max-width: 360px;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+
+.event .event-item img {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+}
+
+.event .event-item h4 {
+	margin-top: 20px;
+	margin-bottom: 5px;
+	font-size: 20px;
+}
+
+.event .event-item .sub-text {
+	display: block;
+	margin-bottom: 10px;
+	font-size: 13px;
+	color: #999;
+	font-style: italic;
+}
+
+.event .event-item  p {
+	font-size: 13px;
+	line-height: 24px;
+	letter-spacing: 0.025em;
+}
+
+/*
+ * blog
+ */
+
+.blog {
+	padding-top: 60px;
+}
+
+.blog .entry {
+	max-width: 600px;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+
+.blog .entry  h3 {
+	margin-top: 20px;
+	margin-bottom: 5px;
+	font-size: 20px;
+}
+
+.blog .entry .meta {
+	display: block;
+	margin-bottom: 10px;
+	font-size: 13px;
+	color: #787878;
+}
+
+.blog .entry  p {
+	font-size: 13px;
+	line-height: 23px;
+}
+
+.blog .text-center .btn {
+	margin-top: 30px;
+}
+
+/*
+ * subscribe
+ */
+
+.subscribe {
+	margin-top: 60px;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	background: #f8f8f8;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+
+.subscribe .sub-content {
+	max-width: 600px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.subscribe .sub-content h3 {
+	margin-top: 0;
+	margin-bottom: 30px;
+	font-size: 30px;
+	font-weight: 400;
+}
+
+.subscribe .sub-content .form-control {
+	box-shadow: none !important;
+	border: 1px solid #ccc;
+	height: 50px;
+	font-size: 18px;
+}
+
+.subscribe .sub-content form .btn {
+	padding: 0 20px;
+	height: 50px;
+	line-height: 49px;
+	font-size: 18px;
+}
+
+/*
+ * team
+ */
+
+.team {
+	padding-top: 60px;
+}
+
+.team .member {
+	max-width: 300px;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+
+.team .member img {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+}
+
+.team .member  h3 {
+	margin-top: 20px;
+	margin-bottom: 5px;
+	font-size: 22px;
+}
+
+.team .member .dig {
+	display: block;
+	font-size: 13px;
+	color: #787878;
+}
+
+/*
+ * login & registration page content
+ */
+
+.login-area,
+.register-area {
+	max-width: 450px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.login-area h3,
+.register-area h3 {
+	margin-top: 0;
+	margin-bottom: 25px;
+	font-size: 22px;
+	color: #fff;
+}
+
+.login-area form,
+.register-area form {
+	max-width: 400px;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 30px;
+	text-align: left;
+}
+.login-area form label ,
+.register-area form label { color: #fff; }
+.login-area form .form-control,
+.register-area form .form-control {
+	box-shadow: none !important;
+	border: 1px solid #d3d3d3;
+	border-radius: 2px;
+	height: 45px;
+	font-size: 16px;
+}
+.login-area form .btn {
+	display: block;
+	width: 100%;
+	margin-top: 15px;
+}
+.register-area form .btn {
+	margin-top: 5px;
+}
+
+/*
+ * footer
+ */
+
+footer {
+	margin-top: 80px;
+	padding: 50px 0;
+	background: #00CEC5;
+	text-align: center;
+	border-top: 1px solid rgba(0,0,0,0.1);
+}
+footer.ffoot {margin-top: 0;}
+footer p {
+	font-size: 13px;
+	line-height: 25px;
+	color: #fff;
+}
+footer p a { 
+	font-size: 13px;
+	line-height: 24px;
+	text-transform: uppercase;
+	letter-spacing: 0.055em;
+	color: #fff;
+}
+footer p a:hover { color: #a93c01; }
+footer .social a {
+	display: inline-block;
+	margin: 0 2px;
+	margin-top: 5px;
+	padding: 2px;
+	width: 35px;
+	height: 35px;
+	line-height: 35px;
+	background: #fff;
+	font-size: 14px;
+	border-radius: 50%;
+}
+
+footer .social a  i {
+	display: block;
+	width: 100%;
+	height: 100%;
+	line-height: 30px;
+	border-radius: 50%;
+	border: 1px dashed #00CEC5;
+}
+
+footer .copy-right {
+	margin-top: 5px;
+}
+
+/*
+ * Responsive CSS 
+ */
+
+/*
+ * Mobile phones 
+ */
+@media (max-width: 480px){
+
+}
+
+/*
+ * Tablets 
+ */
+@media (max-width: 767px){
+	header .navbar-brand img { max-width: 140px; top: 3px; }
+	header .navbar-nav .dropdown-menu:after, 
+	header .navbar-nav .dropdown-menu:before { display: none;}
+	header .navbar-nav .dropdown-menu li a { color: #fff !important;}
+	header .navbar-default .navbar-toggle .icon-bar {background: #fff;	}
+	header .navbar-collapse { border: 0; box-shadow: none; }
+	header .navbar-default .navbar-toggle,
+	header .navbar-default .navbar-toggle:hover,
+	header .navbar-default .navbar-toggle:focus	{
+		background: transparent;
+		border-color: #fff;
+	}
+	
+	.default-heading {text-align: center;}
+}
+
+/*
+ * Desktop 
+ */
+@media (max-width: 991px){
+
+}

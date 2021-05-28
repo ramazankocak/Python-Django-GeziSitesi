@@ -31,9 +31,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'yurtdışı.apps.YurtdışıConfig',
-    'yurtiçi.apps.YurtiçiConfig',
     'home.apps.HomeConfig',
+    'yurtiçi.apps.YurtiçiConfig',
+    'yurtdışı.apps.YurtdışıConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
