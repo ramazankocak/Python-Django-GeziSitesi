@@ -5,7 +5,7 @@ class Bölge(models.Model):
         ('True','Evet'),
         ('False','Hayır'),
     )
-    title = models.CharField(max_length=30)
+    title = models.CharField(max_length=50)
     keyword=models.CharField(max_length=255)
     description=models.CharField(max_length=255)
     image=models.ImageField(blank=True,upload_to='images/')
@@ -24,7 +24,7 @@ class Şehirler(models.Model):
         ('False','Hayır'),
     )
     bölge=models.ForeignKey(Bölge,on_delete=models.CASCADE)
-    title = models.CharField(max_length=30)
+    title = models.CharField(max_length=50)
     keyword=models.CharField(max_length=255)
     description=models.CharField(max_length=255)
     image=models.ImageField(blank=True,upload_to='images/')
@@ -32,5 +32,11 @@ class Şehirler(models.Model):
     şehir=models.TextField()
     create_at=models.DateTimeField(auto_now_add=True)
     update_at=models.DateTimeField(auto_now=True)
+    def __str__(self):
+        return self.title
+class Images(models.Model):
+    şehirler=models.ForeignKey(Şehirler,on_delete=models.CASCADE)
+    title=models.CharField(max_length=50)
+    image=models.ImageField(blank=True,upload_to='images/')
     def __str__(self):
         return self.title
