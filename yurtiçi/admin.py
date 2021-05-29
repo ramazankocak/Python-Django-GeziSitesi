@@ -11,11 +11,12 @@ class BölgeAdmin(admin.ModelAdmin):
     list_filter = ['status']
 
 class ŞehirlerAdmin(admin.ModelAdmin):
-    list_display = ['title', 'status','bölge']
+    list_display = ['title', 'status','bölge','image_tag']
     list_filter = ['status']
     inlines = [ŞehirlerImageInline]
+    readonly_fields = ('image_tag',) #models.py deki image_tag
 class ImagesAdmin(admin.ModelAdmin):
-    list_display = ['title','image']
+    list_display = ['title','image',]
 
 admin.site.register(Bölge,BölgeAdmin)
 admin.site.register(Şehirler,ŞehirlerAdmin)
