@@ -19,7 +19,7 @@ class Setting(models.Model):
     smtpemail = models.CharField(blank=True,max_length=50)
     smtppassword = models.CharField(blank=True,max_length=50)
     smtpport = models.CharField(blank=True,max_length=50)
-    icon = models.ImageField(blank=True,max_length=5)
+    icon = models.ImageField(blank=True,max_length=50)
     facebook = models.CharField(blank=True,max_length=150)
     instagram = models.CharField(blank=True,max_length=100)
     twitter = models.CharField(blank=True,max_length=100)
