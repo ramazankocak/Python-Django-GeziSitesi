@@ -40,10 +40,11 @@
 
     {% include 'topbar.html' %}
     {%block header%} {% include 'header.html'%} {%endblock%}
+	{% if page == "home" %}
     {%block slider%}  {% include 'slider.html'%} {%endblock%}
+	{% endif %}
     {% block content %}  {% include 'content.html'%} {% endblock %}
-    {% include 'footer.html' %}
-    {% block foot %} {% endblock %}
+	{% block footer %} {% include 'footer.html' %} {% endblock %}
 
 </body>
 </html>
