@@ -3,11 +3,13 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render
 
 from home.models import Setting, ContactFormMessage
+from yurtiçi.models import Şehirler
 
 
 def index(request):
     setting=Setting.objects.get(pk=1)
-    context={'setting':setting, 'page':'home'}
+    sliderdata=Şehirler.objects.all()[:3]
+    context={'setting':setting, 'page':'home','sliderdata':sliderdata}
     return render(request, 'index.html',context)
 def iletisim(request):
     if request.method == 'POST':

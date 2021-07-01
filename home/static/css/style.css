@@ -291,7 +291,7 @@ header .navbar-nav .dropdown-menu:after {
 
 header .navbar-nav .dropdown-menu:before {
 	border-color: rgba(194, 225, 245, 0);
-	border-bottom-color: #00CEC5;
+	border-bottom-color: #80fff9
 	border-width: 8px;
 	margin-right: -1px;
 }

@@ -1,6 +1,8 @@
 {% load static %}
 				<div id="slider">
-					<a href="#"><img src="{% static 'img/antalya.jpg' %}" alt="Antalya" style="width:100%;margin:auto"/></a>
-					<a href="#"><img src="{% static 'img/bartin.jpg' %}" alt="Bartın" style="width:100%;margin:auto"/></a>
-					<a href="#"><img src="{% static 'img/nevşehir.jpg' %}" alt="Nevşehir" style="width:100%;margin:auto"/></a>
+					{% for rs in sliderdata %}
+					<div class="banner banner-1">
+						<a href="#"><img src="{{rs.image.url}}" alt="{{rs.title}}" style="width:100%;margin:auto"/></a>
+					</div>
+					{% endfor %}
 				</div>
