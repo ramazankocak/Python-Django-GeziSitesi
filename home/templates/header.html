@@ -18,19 +18,33 @@
 							<ul class="nav navbar-nav navbar-right">
 								<li><a href="/index">Home</a></li>
 								<li><a href="/hakkimizda" class="nav-item nav-link">Hakkımızda</a></li>
+									{% load mptt_tags %}
+											<li class="dropdown">
+												 <a class="dropdown-toggle" data-toggle="dropdown">Yurtiçi<span class="caret"></span></a>
+												   <ul class="dropdown-menu" role="menu">
+													{% recursetree bölge %}
+															<li><a href="/bölge/{{node.slug}}" class="nav-item nav-link">{{node.title}}</a></li>
+													{% endrecursetree %}
+												   </ul>
+											</li>
 								<li class="dropdown">
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Yurtiçi <span class="caret"></span></a>
+									<a class="dropdown-toggle" data-toggle="dropdown">Yurtiçi<span class="caret"></span></a>
 									<ul class="dropdown-menu" role="menu">
-										<li><a href="/referanslar" class="nav-item nav-link">Antalya</a></li>
-										<li><a href="about.html" class="nav-item nav-link">Bartın</a></li>
-										<li><a href="about.html" class="nav-item nav-link">Nevşehir</a></li>
+										<li><a href="/bölge" class="nav-item nav-link">Akdeniz</a></li>
+										<li><a href="/bölge" class="nav-item nav-link">Doğu Anadolu</a></li>
+										<li><a href="/bölge" class="nav-item nav-link">Ege</a></li>
+										<li><a href="/bölge" class="nav-item nav-link">Güney Doğu Anadolu</a></li>
+										<li><a href="/bölge" class="nav-item nav-link">Karadeniz</a></li>
+										<li><a href="/bölge" class="nav-item nav-link">Marmara</a></li>
+										<li><a href="/bölge" class="nav-item nav-link">İç Anadolu</a></li>
 									</ul>
+								</li>
 								<li class="dropdown">
 									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Yurtdışı <span class="caret"></span></a>
 									<ul class="dropdown-menu" role="menu">
-										<li><a href="about.html" class="nav-item nav-link">Amerika</a></li>
-										<li><a href="about.html" class="nav-item nav-link">Asya</a></li>
-										<li><a href="about.html" class="nav-item nav-link">Afrika</a></li>
+										<li><a href="#" class="nav-item nav-link">Amerika</a></li>
+										<li><a href="#" class="nav-item nav-link">Asya</a></li>
+										<li><a href="#" class="nav-item nav-link">Afrika</a></li>
 									</ul>
 								</li>
 								<li><a href="registration.html">Signup</a></li>

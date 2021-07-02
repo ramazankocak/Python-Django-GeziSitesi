@@ -3,13 +3,14 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render
 
 from home.models import Setting, ContactFormMessage
-from yurtiçi.models import Şehirler
+from yurtiçi.models import Şehirler, Bölge
 
 
 def index(request):
     setting=Setting.objects.get(pk=1)
-    sliderdata=Şehirler.objects.all()[:3]
-    context={'setting':setting, 'page':'home','sliderdata':sliderdata}
+    sliderdata=Şehirler.objects.all()[:5]
+    bölge=Bölge.objects.all()
+    context={'setting':setting,'bölge':bölge, 'page':'home','sliderdata':sliderdata}
     return render(request, 'index.html',context)
 def iletisim(request):
     if request.method == 'POST':
@@ -26,7 +27,7 @@ def iletisim(request):
             return HttpResponseRedirect ('/iletisim')
 
     setting=Setting.objects.get(pk=1)
-    context={'setting':setting, 'form':'form'}
+    context={'setting':setting}
     return render(request, 'iletisim.html',context)
 def hakkimizda(request):
     setting=Setting.objects.get(pk=1)
